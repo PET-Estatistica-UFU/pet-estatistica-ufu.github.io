@@ -19,7 +19,7 @@ jobs:
       
       - name: Install required R packages
         run: |
-          Rscript -e 'install.packages(c("stringr" ,"rmarkdown", "knitr", "maps", "ggplot2", "dplyr", "reshape2", "rvest"), repos="https://cran.r-project.org")'
+          Rscript -e 'install.packages(c("stringr" ,"rmarkdown", "knitr", "maps", "ggplot2", "dplyr", "reshape2", "rvest", "mapproj"), repos="https://cran.r-project.org")'
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
