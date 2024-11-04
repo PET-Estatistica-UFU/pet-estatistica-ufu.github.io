@@ -266,25 +266,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>clusterizacao<span class="sc">$</span>cluster</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       Alabama         Alaska        Arizona       Arkansas     California 
-             1              5              5              2              5 
+             3              2              2              4              2 
       Colorado    Connecticut       Delaware        Florida        Georgia 
-             5              4              4              5              1 
+             2              5              5              2              3 
         Hawaii          Idaho       Illinois        Indiana           Iowa 
-             4              3              5              2              3 
+             5              1              2              4              1 
         Kansas       Kentucky      Louisiana          Maine       Maryland 
-             2              2              1              3              5 
+             4              4              3              1              2 
  Massachusetts       Michigan      Minnesota    Mississippi       Missouri 
-             4              5              3              1              2 
+             5              2              1              3              4 
        Montana       Nebraska         Nevada  New Hampshire     New Jersey 
-             2              2              5              3              4 
+             4              4              2              1              5 
     New Mexico       New York North Carolina   North Dakota           Ohio 
-             5              5              1              3              4 
+             2              2              3              1              5 
       Oklahoma         Oregon   Pennsylvania   Rhode Island South Carolina 
-             2              2              4              4              1 
+             4              4              5              5              3 
   South Dakota      Tennessee          Texas           Utah        Vermont 
-             3              1              5              4              3 
+             1              3              2              5              1 
       Virginia     Washington  West Virginia      Wisconsin        Wyoming 
-             2              4              3              3              2 </code></pre>
+             4              5              1              1              4 </code></pre>
 </div>
 </div>
 <p>Agora que conseguimos agrupar os estados, criaremos uma coluna em nosso <em>dataframe</em> chamada <em>cluster</em> contendo a classificação de cada observação. Também usaremos a função <em>as.factor()</em> para transformar o vetor em um fator, ou seja, em um dado categórico.</p>
@@ -301,31 +301,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(cluster1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "Alabama"        "Georgia"        "Louisiana"      "Mississippi"   
-[5] "North Carolina" "South Carolina" "Tennessee"     </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(cluster2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "Arkansas" "Indiana"  "Kansas"   "Kentucky" "Missouri" "Montana" 
- [7] "Nebraska" "Oklahoma" "Oregon"   "Virginia" "Wyoming" </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(cluster3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
 <pre><code> [1] "Idaho"         "Iowa"          "Maine"         "Minnesota"    
  [5] "New Hampshire" "North Dakota"  "South Dakota"  "Vermont"      
  [9] "West Virginia" "Wisconsin"    </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(cluster4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "Connecticut"   "Delaware"      "Hawaii"        "Massachusetts"
- [5] "New Jersey"    "Ohio"          "Pennsylvania"  "Rhode Island" 
- [9] "Utah"          "Washington"   </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(cluster5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(cluster2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Alaska"     "Arizona"    "California" "Colorado"   "Florida"   
  [6] "Illinois"   "Maryland"   "Michigan"   "Nevada"     "New Mexico"
 [11] "New York"   "Texas"     </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(cluster3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Alabama"        "Georgia"        "Louisiana"      "Mississippi"   
+[5] "North Carolina" "South Carolina" "Tennessee"     </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(cluster4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Arkansas" "Indiana"  "Kansas"   "Kentucky" "Missouri" "Montana" 
+ [7] "Nebraska" "Oklahoma" "Oregon"   "Virginia" "Wyoming" </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(cluster5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Connecticut"   "Delaware"      "Hawaii"        "Massachusetts"
+ [5] "New Jersey"    "Ohio"          "Pennsylvania"  "Rhode Island" 
+ [9] "Utah"          "Washington"   </code></pre>
 </div>
 </div>
 <p>Agora que sabemos a qual grupo pertence cada estado, podemos começar a pensar em alguns questionamentos interessantes. Além das taxas de prisões, o que será que esses estados agrupados no mesmo <em>cluster</em> possuem em comum? Será que são estados geograficamente próximos uns dos outros? Será que dividem semelhanças em aspectos socioeconômicos ou no contexto histórico?</p>
