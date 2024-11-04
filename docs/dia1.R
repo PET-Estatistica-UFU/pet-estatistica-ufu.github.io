@@ -1,8 +1,14 @@
 #o comando install.packages() instala os pacotes necessários para rodar o código; caso já tenha instalado, não é necessário rodar novamente; então basta não executar as linhas com este comando ou deixá-las como comentário; um comentário no R é feito com o símbolo "#"; tudo que vem depois do "#" é ignorado pelo programa
 
-install.packages("rvest")
-install.packages("dplyr")
-install.packages("stringr")
+if (!requireNamespace("rvest", quietly = TRUE)) {
+  install.packages("rvest")
+}
+if (!requireNamespace("dplyr", quietly = TRUE)) {
+  install.packages("dplyr")
+}
+if (!requireNamespace("stringr", quietly = TRUE)) {
+  install.packages("stringr")
+}
 
 #após instalar os pacotes, é necessário carregá-los para que possam ser utilizados; isso é feito com o comando library():
 library(rvest)
